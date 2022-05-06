@@ -1,6 +1,7 @@
 .App {
   background-color: rgb(0, 0, 0);
   color: white;
+  font-family: "Inconsolata", monospace;
   text-align: center;
 }
 
@@ -63,7 +64,15 @@ a {
   display: flex;
 }
 
+.header-list-right a {
+  font-size: 1.4rem;
+}
+
 a:hover {
+  text-decoration: underline;
+}
+
+.header-list-right a:hover {
   background-color: rgb(29, 29, 29);
   text-decoration: underline;
   border-radius: 10px;
@@ -75,6 +84,7 @@ input {
   border-radius: 20px;
   width: 250px;
   margin: 35px 0 0 0;
+  font-size: 1.2rem;
 }
 
 input:hover {
@@ -109,4 +119,30 @@ input:hover {
 
 .cats {
   margin: 50px 100px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
+
+.next-page button {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.next-page {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 50px;
+}
+
+.next-page .one {
+  background-color: #282c34;
+  cursor: auto;
+}
+
+.main-head:hover {
+  background-color: black;
 }

@@ -2,6 +2,8 @@ import "./App.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Card from "./Card";
+import Pager from "./Pager";
+import Foot from "./Foot";
 
 function App() {
   const [product, setProduct] = useState([]);
@@ -52,6 +54,8 @@ function App() {
       <div className="cards">
         <Card key={product.id} product={product} />
       </div>
+      <Pager />
+      <Foot />
     </div>
   );
 }
