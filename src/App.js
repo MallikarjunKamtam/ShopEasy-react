@@ -5,6 +5,7 @@ import Card from "./Card";
 
 function App() {
   const [product, setProduct] = useState([]);
+  // const [categoty, setCategory] = useState(0);
 
   const fetchData = async () => {
     const data = await axios
@@ -19,6 +20,10 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  // const arr = [];
+  // const brands = product.map((x) => arr.push(x.brand));
+  // // console.log(new Set(arr));
 
   return (
     <div className="App">
@@ -38,8 +43,14 @@ function App() {
           </ul>
         </div>
       </div>
+
+      <div className="cats">
+        {product.map((cat, index) => {
+          return <button key={cat.id}>{cat.brand}</button>;
+        })}
+      </div>
       <div className="cards">
-        <Card product={product} />
+        <Card key={product.id} product={product} />
       </div>
     </div>
   );
